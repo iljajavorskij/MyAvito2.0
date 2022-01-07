@@ -23,5 +23,14 @@
     <string name="sing_out">выход</string>
     <string name="sing_out_action">выйти</string>
     <string name="forgot_password">забыли пароль?</string>
+    <string name="error_sing_up">ошибка при регестрации</string>
+    <string name="verification_message_send">на вашу почту была отправлена ссылка для подтверждения вашего аккаунта</string>
+    <string name="verification_message_not_send">ошибка при отправке ссылки для подтвердения</string>
+    <string name="successful">успешно</string>
+    <string name="header_text_view">войдите или зарегестрируйтесь</string>
+    <string name="error_sing_in">ошибка при входе</string>
+    <string name="text_view_forget_password_mailIs_empty">введите адрес электронной почты</string>
+    <string name="reset_password_send_message">на почту отправлено письмо для восстановления пароля</string>
+
 
 </resources>
