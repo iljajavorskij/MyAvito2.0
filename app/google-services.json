@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "47833848483",
+    "project_id": "myavito2-0",
+    "storage_bucket": "myavito2-0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47833848483:android:5d971ebb1d2742a251fd16",
+        "android_client_info": {
+          "package_name": "org.myapp.myavito20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47833848483-ruinsv43o3bdhmn4s6deo00epi2p6bnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7FskVbspXRjh0Q7m71iny_WrKyp_-Luc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47833848483-ruinsv43o3bdhmn4s6deo00epi2p6bnl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

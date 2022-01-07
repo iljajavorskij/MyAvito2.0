@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MyAvito2.0</string>
+    <!--drawer menu strings-->
+    <string name="my_ad">Мои объявления</string>
+    <string name="cat">Категории</string>
+    <string name="ads">Объявления</string>
+    <string name="ads_car">Автомобили</string>
+    <string name="ads_phone">Телефоны</string>
+    <string name="ads_pc">Компьютеры</string>
+    <string name="ads_photo">Фотоапараты</string>
+    <string name="account">Аккаунт</string>
+    <string name="sign_up">Регестрация</string>
+    <string name="sign_in">Вход</string>
+    <string name="sign_out">Выход</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="hint_mail">mail</string>
+    <string name="hint_password">password</string>
+    <string name="sing_in">вход</string>
+    <string name="sing_up">регестрация</string>
+    <string name="sing_in_action">войти</string>
+    <string name="sing_up_action">зарегестрироваться </string>
+    <string name="sing_out">выход</string>
+    <string name="sing_out_action">выйти</string>
+    <string name="forgot_password">забыли пароль?</string>
+
+</resources>
