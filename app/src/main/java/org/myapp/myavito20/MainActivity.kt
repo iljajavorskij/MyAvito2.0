@@ -3,6 +3,7 @@ package org.myapp.myavito20
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
@@ -10,10 +11,13 @@ import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.common.api.ApiException
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import org.myapp.myavito20.accountHelper.AccountHelper
 import org.myapp.myavito20.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
@@ -29,8 +33,23 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
         super.onCreate(savedInstanceState)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
-
         initView()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == AccountHelper.REQ_CODE){
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            try {
+                val account = task.getResult(ApiException::class.java)
+                if (account != null){
+                    dialog.accountHelper.signInFirebaseWithGoogle(account.idToken!!)
+                }
+            }catch (e:ApiException){
+                Log.d("ex",e.message.toString())
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data)
+
     }
 
     override fun onStart() {
@@ -68,6 +87,7 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
             R.id.sing_out -> {
                 uiUpdate(null)
                 mAuth.signOut()
+                dialog.accountHelper.signOutGoogle()
             }
         }
         drawerLayout.closeDrawer(GravityCompat.START)

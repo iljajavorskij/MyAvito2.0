@@ -8,7 +8,7 @@ import org.myapp.myavito20.databinding.SingDialogBinding
 
 class DialogHelper(activity1:MainActivity) {
     val activity = activity1
-    private val accountHelper = AccountHelper(activity1)
+    val accountHelper = AccountHelper(activity1)
 
 
     fun createDialog(index:Int){
@@ -22,6 +22,10 @@ class DialogHelper(activity1:MainActivity) {
         }
         rootElement.buttonForgetPass.setOnClickListener {
             setOnClickButtonForget(rootElement,dialog)
+        }
+        rootElement.buttonSignInWithGoogle.setOnClickListener {
+            accountHelper.signInWithGoogle()
+            dialog.dismiss()
         }
         dialog.show()
     }

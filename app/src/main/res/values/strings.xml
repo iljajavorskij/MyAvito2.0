@@ -31,6 +31,7 @@
     <string name="error_sing_in">ошибка при входе</string>
     <string name="text_view_forget_password_mailIs_empty">введите адрес электронной почты</string>
     <string name="reset_password_send_message">на почту отправлено письмо для восстановления пароля</string>
+    <string name="link_done">аккауты соеденины</string>
 
 
 </resources>

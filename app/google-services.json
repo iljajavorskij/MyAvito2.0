@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "47833848483-5osap2tblevdmc2d46b0ob2q2lfn1oio.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.myapp.myavito20",
+            "certificate_hash": "f458643e8fb1236b2ae73c1eb9c220b0f6c5b51b"
+          }
+        },
+        {
           "client_id": "47833848483-ruinsv43o3bdhmn4s6deo00epi2p6bnl.apps.googleusercontent.com",
           "client_type": 3
         }
