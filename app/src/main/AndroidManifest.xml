@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyAvito20">
         <activity
+            android:name=".activity.EditNewAd"
+            android:exported="false" />
+        <activity
             android:name=".ContentActivity"
             android:exported="false" />
         <activity

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
@@ -18,6 +19,7 @@ import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import org.myapp.myavito20.accountHelper.AccountHelper
+import org.myapp.myavito20.activity.EditNewAd
 import org.myapp.myavito20.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
@@ -52,14 +54,31 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
 
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.new_ad -> {
+                val intent = Intent(this,EditNewAd::class.java)
+                startActivity(intent)
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.my_add_menu,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
     override fun onStart() {
         super.onStart()
         uiUpdate(mAuth.currentUser)
     }
     private fun initView(){
+
         navView = mBinding.navigateView
         drawerLayout = mBinding.drawerMenu
         toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
         val toggle = ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
